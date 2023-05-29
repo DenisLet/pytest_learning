@@ -5,7 +5,7 @@ from src.schemes.post import POST_SCHEMA
 from src.baseclasses.response import Response
 from src.pydantic_schema.post import Post
 from src.schemes.user import User
-import allure
+
 
 
 @pytest.mark.production
@@ -18,7 +18,6 @@ def test_another():
     Try to check that 1 is equal 2
 
     '''
-
     assert 1 == 2
 
 

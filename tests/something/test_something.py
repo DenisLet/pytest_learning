@@ -23,8 +23,10 @@ def test_something1(delete_key, get_player_generator):
     print(object_to_send)
 
 
-def something2(get_player_generator):
-    object_to_send = get_player_generator.update_inner_generator('localize', {PlayerLocalization('fr_FR')}).build()
+def test_something2(get_player_generator):
+    object_to_send = get_player_generator.update_inner_value(
+        ['localize','en','countries','v'], PlayerLocalization('fr_FR').set_number(15).build()
+    ).build()
     print(object_to_send)
 
 
